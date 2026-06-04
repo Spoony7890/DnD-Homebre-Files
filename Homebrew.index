@@ -2,10 +2,10 @@
 <index>
   <info>
     <update version="1.0">
-      <file name="Homebrew.index" url="http://hosting.com/files/Homebrew.index" />
+      <file name="Homebrew.index" url="https://github.com/Spoony7890/DnD-Homebre-Files/blob/main/Homebrew.index" />
     </update>
   </info>
   <files>
-    <file name="items.xml" url="http://hosting.com/files/items.xml" />
+    <file name="Homebrew.xml" url="https://github.com/Spoony7890/DnD-Homebre-Files/blob/main/Homebrew.xml" />
   </files>
 </index>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<index>
+  <info>
+    <update version="1.0">
+      <file name="Homebrew.index" url="http://hosting.com/files/Homebrew.index" />
+    </update>
+  </info>
+  <files>
+    <file name="items.xml" url="http://hosting.com/files/items.xml" />
+  </files>
+</index>

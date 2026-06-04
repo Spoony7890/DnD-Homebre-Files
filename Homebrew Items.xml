@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<element name="Moonstone of Aranthor" type="Magic Item" source="Homebrew" id="ID_SPOONY_HB_MAGIC_ITEM_MOONSTONE_OF_ARANTHOR">
+		<description>
+			<p>A powerful artifact. Grants Drakvision 120ft, increases Armor Class by 1, and once per long rest you can turn ethereal for 1 minute.</p>
+		</description>
+		<setters>
+			<set name="keywords">Ethereal</set>
+			<set name="category">Homebrew Items</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="weight" lb="0">0 lb.</set>
+			<set name="slot">neck</set>
+			<set name="type">Homebrew Item</set>
+			<set name="armorClass">+1</set>
+			<set name="attunement">true</set>
+			<set name="rarity">Legendary</set>
+		</setters>
+		<rules>
+			<stat name="ac:misc" value="1" />
+			<grant type="Vision" id="ID_VISION_LESSER_DARKVISION" />
+		</rules>
+	</element>
+</elements>

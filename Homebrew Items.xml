@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
+	<info>
+		<name>Homebrew Items</name>
+		<update version="0.0.1">
+			<file name="Homebrew Items.xml" url="https://github.com/Spoony7890/DnD-Homebre-Files/blob/main/Homebrew%20Items.xml" />
+		</update>
+	</info>
 	<element name="Moonstone of Aranthor" type="Magic Item" source="Homebrew" id="ID_SPOONY_HB_MAGIC_ITEM_MOONSTONE_OF_ARANTHOR">
 		<description>
 			<p>A powerful artifact. Grants Drakvision 120ft, increases Armor Class by 1, and once per long rest you can turn ethereal for 1 minute.</p>

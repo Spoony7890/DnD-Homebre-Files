@@ -2,7 +2,7 @@
 <elements>
 	<info>
 		<name>Homebrew Items</name>
-		<update version="0.0.1">
+		<update version="0.0.2">
 			<file name="Homebrew Items.xml" url="https://raw.githubusercontent.com/Spoony7890/DnD-Homebre-Files/refs/heads/main/Homebrew%20Items.xml" />
 		</update>
 	</info>

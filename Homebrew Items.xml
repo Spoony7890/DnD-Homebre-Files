@@ -26,4 +26,28 @@
 			<grant type="Vision" id="ID_VISION_LESSER_DARKVISION" />
 		</rules>
 	</element>
+	<element name="Ravenleaf Bulwark" type="Armor" source="Homebrew" id="ID_SPOONY_HB_ARMOR_RAVENLEAF_BULWARK">
+		<supports>ID_INTERNAL_ARMOR_GROUP_SHIELD</supports>
+		<description>
+			<p>While holding this shield, you gain a +1 bonus to wisdom.</p>
+			<p>Oak Father's Wrath (3/long rest): Once per turn, as an action or bonus action, you call upon the ancient will of the wild. Grasping vines and roots erupt from the ground beneath a creature within 20 feet. The Target must succeed on a DC 13 Strength saving throw or be restrained until the end of its next turn.</p>
+			<p>Matron's Retribution (3/long rest): When a creature misses you with a melee attack, you can use your reaction to unleash forceful unseen energy. The attacker takes 3d6 force damage and must succeed on a DC 15 Strength saving throw or be pushed 10 feet away. On a success, it takes half damage and isn't pushed.</p> 
+		</description>
+		<setters>
+			<set name="category">Armor</set>
+			<set name="cost" currency="gp">10</set>
+			<set name="weight" lb="6">6 lb.</set>
+			<set name="slot">onehand,secondary</set>
+			<set name="type">Shield</set>
+			<set name="armor">Shield</set>
+			<set name="armorClass">+2</set>
+			<set name="proficiency">ID_PROFICIENCY_ARMOR_PROFICIENCY_SHIELD</set>
+			<set name="attunement">true</set>
+			<set name="rarity">Very Rare</set>
+		</setters>
+		<rules>
+			<stat name="ac:shield" value="2" bonus="shield" />
+			<grant type="Ability Score Improvement" id="ID_INTERNAL_ASI_WISDOM" />
+		</rules>		
+	</element>	
 </elements>

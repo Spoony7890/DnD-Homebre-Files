@@ -34,7 +34,7 @@
 			<p>Matron's Retribution (3/long rest): When a creature misses you with a melee attack, you can use your reaction to unleash forceful unseen energy. The attacker takes 3d6 force damage and must succeed on a DC 15 Strength saving throw or be pushed 10 feet away. On a success, it takes half damage and isn't pushed.</p> 
 		</description>
 		<setters>
-			<set name="category">Armor</set>
+			<set name="category">Homebrew Items</set>
 			<set name="cost" currency="gp">10</set>
 			<set name="weight" lb="6">6 lb.</set>
 			<set name="slot">onehand,secondary</set>

@@ -49,5 +49,23 @@
 			<stat name="ac:shield" value="2" bonus="shield" />
 			<grant type="Ability Score Improvement" id="ID_INTERNAL_ASI_WISDOM" />
 		</rules>		
-	</element>	
+	</element>
+	<element name="Mantle of the Dusk Wanderer" type="Magic Item" source="Homebrew" id="ID_SPOONY_HB_MAGIC_ITEM_MANTLE_OF_THE_DUSK_WANDERER">
+		<description>
+			<p>While wearing this mantle, heavy armor doesn't impose disadvantage on your Dexterity (Stealth) checks.
+			Once per long rest, when you fall, you can use your reaction to spread the mantle.
+			For the duration of the fall: you descend as though affected by a feather fall spell, and while descending, you can move up to 20 feet horizontally.
+			At night, you have advantage on all Survival checks.</p>
+		</description>
+		<setters>
+			<set name="keywords">saving throw</set>
+			<set name="category">Homebrew Items</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="weight" lb="0">0 lb.</set>
+			<set name="slot">shoulders</set>
+			<set name="type">Wondrous Item</set>
+			<set name="attunement">true</set>
+			<set name="rarity">Rare</set>
+		</setters>
+	</element>
 </elements>

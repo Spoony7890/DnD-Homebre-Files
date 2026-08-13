@@ -2,7 +2,7 @@
 <elements>
 	<info>
 		<name>Homebrew Items</name>
-		<update version="0.0.3">
+		<update version="0.0.5">
 			<file name="Homebrew Items.xml" url="https://raw.githubusercontent.com/Spoony7890/DnD-Homebre-Files/refs/heads/main/Homebrew%20Items.xml" />
 		</update>
 	</info>
@@ -26,20 +26,20 @@
 			<grant type="Vision" id="ID_VISION_LESSER_DARKVISION" />
 		</rules>
 	</element>
-	<element name="Ravenleaf Bulwark" type="Armor" source="Homebrew" id="ID_SPOONY_HB_ARMOR_RAVENLEAF_BULWARK">
-		<supports>ID_INTERNAL_ARMOR_GROUP_SHIELD</supports>
+	<element name="Ravenleaf Bulwark" type="Magic Item" source="Homebrew" id="ID_SPOONY_HB_ARMOR_RAVENLEAF_BULWARK">
 		<description>
 			<p>While holding this shield, you gain a +1 bonus to wisdom.</p>
-			<p>Oak Father's Wrath (3/long rest): Once per turn, as an action or bonus action, you call upon the ancient will of the wild. Grasping vines and roots erupt from the ground beneath a creature within 20 feet. The Target must succeed on a DC 13 Strength saving throw or be restrained until the end of its next turn.</p>
-			<p>Matron's Retribution (3/long rest): When a creature misses you with a melee attack, you can use your reaction to unleash forceful unseen energy. The attacker takes 3d6 force damage and must succeed on a DC 15 Strength saving throw or be pushed 10 feet away. On a success, it takes half damage and isn't pushed.</p> 
+			<p class="indent"><strong><em>Oak Father's Wrath (3/long rest): </em></strong>Once per turn, as an action or bonus action, you call upon the ancient will of the wild. Grasping vines and roots erupt from the ground beneath a creature within 20 feet. The Target must succeed on a DC 13 Strength saving throw or be restrained until the end of its next turn.</p>
+			<p class="indent"><strong><em>Matron's Retribution (3/long rest): </em></strong>When a creature misses you with a melee attack, you can use your reaction to unleash forceful unseen energy. The attacker takes 3d6 force damage and must succeed on a DC 15 Strength saving throw or be pushed 10 feet away. On a success, it takes half damage and isn't pushed.</p> 
 		</description>
 		<setters>
+			<set name="keywords">shield</set>
 			<set name="category">Homebrew Items</set>
-			<set name="cost" currency="gp">10</set>
-			<set name="weight" lb="6">6 lb.</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="weight" lb="0">0 lb.</set>
 			<set name="slot">onehand,secondary</set>
-			<set name="type">Shield</set>
-			<set name="armor">Shield</set>
+			<set name="type" addition="shield">Armor</set>
+			<set name="armor">ID_INTERNAL_ARMOR_GROUP_SHIELD</set>
 			<set name="armorClass">+2</set>
 			<set name="proficiency">ID_PROFICIENCY_ARMOR_PROFICIENCY_SHIELD</set>
 			<set name="attunement">true</set>
@@ -52,10 +52,9 @@
 	</element>
 	<element name="Mantle of the Dusk Wanderer" type="Magic Item" source="Homebrew" id="ID_SPOONY_HB_MAGIC_ITEM_MANTLE_OF_THE_DUSK_WANDERER">
 		<description>
-			<p>While wearing this mantle, heavy armor doesn't impose disadvantage on your Dexterity (Stealth) checks.
-			Once per long rest, when you fall, you can use your reaction to spread the mantle.
-			For the duration of the fall: you descend as though affected by a feather fall spell, and while descending, you can move up to 20 feet horizontally.
-			At night, you have advantage on all Survival checks.</p>
+			<p>While wearing this mantle, heavy armor doesn't impose disadvantage on your Dexterity (Stealth) checks.</p>
+			<p class="indent">Once per long rest, when you fall, you can use your reaction to spread the mantle. For the duration of the fall: you descend as though affected by a feather fall spell, and while descending, you can move up to 20 feet horizontally.</p>
+			<p class="indent">At night, you have advantage on all Survival checks.</p>
 		</description>
 		<setters>
 			<set name="keywords">saving throw</set>
@@ -66,6 +65,388 @@
 			<set name="type">Wondrous Item</set>
 			<set name="attunement">true</set>
 			<set name="rarity">Rare</set>
+		</setters>
+	</element>
+	<element name="Kethril's Lucky Coin" type="Magic Item" source="Homebrew" id="ID_SPOONY_HB_MAGIC_ITEM_KETHRILS_LUCKY_COIN">
+		<description>
+			<p>At the start of combat, you can flip this coin. (Roll a d20) The result of the flip determines the benefit.</p>
+			<p class="indent"><strong><em>Blade (Heads/1-10): </em></strong>You gain advantage on your next attack roll.</p>
+			<p class="indent"><strong><em>Guard (Tails/11-20): </em></strong>You gain advantage on your next saving throw.</p>
+			<p class="indent">Additionally, you may use this item as a bonus action once per short rest.</p>
+		</description>
+		<setters>
+			<set name="category">Homebrew Items</set>
+			<set name="type">Wondrous Item</set>
+			<set name="rarity">Rare</set>
+		</setters>
+	</element>
+	<element name="Oathbrand Longsword" type="Magic Item" source="Homebrew" id="ID_SPOONY_HB_MAGIC_ITEM_OATHBRAND_LONGSWORD">
+		<supports>ID_INTERNAL_WEAPON_CATEGORY_MARTIAL_MELEE, ID_INTERNAL_DAMAGE_TYPE_SLASHING, ID_INTERNAL_WEAPON_PROPERTY_VERSATILE, ID_INTERNAL_WEAPON_GROUP_SWORDS</supports>
+		<description>
+			<p><strong><em>Special Quality: </em></strong>Counts as magical and silvered.</p>
+			<p><strong><em>Sanctified Stand (1/Short rest): </em></strong>As an Action or Bonus Action, you raise the blade skyward, until the start of your next turn: You and all allies within 10ft. gain +2AC. You cannot attack or move while channeling this ability.</p>
+		</description>
+		<setters>
+			<set name="keywords">Longsword</set>
+			<set name="category">Homebrew Items</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="type" addition="longsword">Weapon</set>
+			<set name="rarity">Rare</set>
+			<set name="slot">onehand</set>
+			<set name="damage" type="slashing">1d8</set>
+			<set name="versatile">1d10</set>
+			<set name="weapon">Longsword</set>
+			<set name="enhancement">1</set>
+			<set name="proficiency">ID_PROFICIENCY_WEAPON_PROFICIENCY_LONGSWORD</set>
+		</setters>
+	</element>
+	<element name="Thorn of the Fallen Grove" type="Magic Item" source="Homebrew" id="ID_SPOONY_HB_MAGIC_ITEM_THORN_OF_THE_FALEN_GROVE">
+		<supports>ID_INTERNAL_WEAPON_CATEGORY_SIMPLE_MELEE, ID_INTERNAL_DAMAGE_TYPE_PIERCING, ID_INTERNAL_WEAPON_PROPERTY_FINESSE, ID_INTERNAL_WEAPON_PROPERTY_LIGHT, ID_INTERNAL_WEAPON_PROPERTY_THROWN</supports>
+		<description>
+			<p><strong><em>Hollowstep Tempo: </em></strong>When you make the extra attack of the <em>Light</em> property, you can make it as part of the <strong>Attack action </strong>instead of as a <strong>Bonus Action</strong>. You can make this extra attack only once per turn.</p>
+			<p><strong><em>Mycelial Blade: </em></strong>Once per turn, when you deal <strong>Sneak Attack damage</strong>, you deal an additional <strong>1d6 Necrotic damage</strong>.</p>
+			<p class="indent">If the target is poisoned, it takes an additional <strong>1d6 Necrotic damage</strong>.</p>
+			<p><strong><em>Primeval Veil (1/Short Rest): </em></strong>As a <strong>Bonus Action</strong>, you dissolve into a swirling veil of spores, leaves, and shadow, teleporting up to <strong>30 feet</strong> to an unoccupied space you can see.</p>
+			<p class="indent">Until the start of your next turn Attack rolls against you have disadvantage and this movement does not provoke <strong>Opportunity Attacks</strong>.</p>
+			<p><strong><em>Venom Strike (1/Long Rest): </em></strong>As a <strong>Bonus Action</strong>, you cause dark, resinous sap to seep from the blade, coating it in toxic venom. The next time you hit a creature, it must succeed on a <strong>DC 16 Constitution saving throw</strong> or take <strong>4d6 Poison damage</strong> and becomes <strong>poisoned for 1 minute</strong>. On a success it takes half damage and is not poisoned. A poisoned creature can repeat the saving throw at the end of each of its turns, ending the effect on a success.</p>
+		</description>
+		<setters>
+			<set name="keywords">dagger</set>
+			<set name="category">Homebrew Items</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="type" addition="dagger">Weapon</set>
+			<set name="slot">onehand</set>
+			<set name="damage" type="piercing">1d4</set>
+			<set name="rarity">Rare</set>
+			<set name="enhancement">1</set>
+			<set name="weapon">ID_INTERNAL_WEAPON_CATEGORY_SIMPLE_MELEE||ID_INTERNAL_WEAPON_CATEGORY_SIMPLE_RANGED||ID_INTERNAL_WEAPON_CATEGORY_MARTIAL_MELEE||ID_INTERNAL_WEAPON_CATEGORY_MARTIAL_RANGED</set>
+		</setters>
+	</element>
+	<element name="Skyfall" type="Magic Item" source="Homebrew" id="ID_SPOONY_HB_MAGIC_ITEM_SKYFALL">
+		<supports>ID_INTERNAL_WEAPON_CATEGORY_MARTIAL_MELEE, ID_INTERNAL_DAMAGE_TYPE_PIERCING</supports>
+		<description>
+			<p><strong><em>Fallen Star Core:</em> Once on each of your turns</strong>, when you hit a creature with Skyfall, the weapon erupts with celestial energy, dealing an additional <strong>1d6 Radiant damage</strong>.</p>
+			<p class="indent"><strong><em>Arcane Convergence:</em></strong> When you cast a spell of <strong>1st level or higher, Until the end of your next turn</strong>, the next time you hit a creature with Skyfall, the extra damage from <strong>Fallen Star Core</strong> also deals an additional <strong>1d8 Fire, Cold, Lighting, or Thunder damage (your choice)</strong>.</p>
+			<p class="indent"><strong><em>Vengeful Flare:</em></strong> When you miss with an attack using Skyfall, celestial fragments scrape across your foe before reforming into the weapon. The target takes <strong>Radiant damage</strong> equal to your <strong>Strength modifier</strong>.</p>
+			<p class="indent"><strong><em>Heaven's Descent (1/Short Rest):</em></strong> As a <strong>Bonus Action</strong>, you can cause Skyfall to fracture into celestial shards that streak twords a distant foe before reforming in your grasp. Until the <strong>end of your next turn</strong>, you can make <strong>one attack</strong> with Skyfall against a creature <strong>within 30 feet</strong>.</p>
+			<p class="indent"><strong><em>Skyward Strike (1/Long Rest):</em></strong> When you hit a creature with Skyfall, you can unleash the star's latent power. The attack deals an additional <strong>3d8 Radiant damage</strong>, and the target must succeed on a <strong>DC 14 Constitution saving throw</strong> or be <strong>blinded until the end of your next turn</strong>.</p>
+		</description>
+		<setters>
+			<set name="keywords">morningstar</set>
+			<set name="category">Homebrew Items</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="weight" lb="0">0 lb.</set>
+			<set name="type" addition="morningstar">Weapon</set>
+			<set name="rarity">Very Rare</set>
+			<set name="slot">onehand</set>
+			<set name="damage" type="piercing">1d8</set>
+			<set name="enhancement">1</set>
+			<set name="weapon">ID_INTERNAL_WEAPON_CATEGORY_SIMPLE_MELEE||ID_INTERNAL_WEAPON_CATEGORY_SIMPLE_RANGED||ID_INTERNAL_WEAPON_CATEGORY_MARTIAL_MELEE||ID_INTERNAL_WEAPON_CATEGORY_MARTIAL_RANGED</set>
+			<set name="proficiency">ID_PROFICIENCY_WEAPON_PROFICIENCY_MORNINGSTAR</set>
+		</setters>
+	</element>
+	<element name="Moonfang Dagger" type="Magic Item" source="Homebrew" id="ID_SPOONY_HB_MAGIC_ITEM_MOONFANG_DAGGER">
+		<supports>ID_INTERNAL_WEAPON_CATEGORY_SIMPLE_MELEE, ID_INTERNAL_DAMAGE_TYPE_PIERCING, ID_INTERNAL_WEAPON_PROPERTY_FINESSE, ID_INTERNAL_WEAPON_PROPERTY_LIGHT, ID_INTERNAL_WEAPON_PROPERTY_THROWN</supports>
+		<description>
+			<p><strong><em>Special Qualities:</em></strong> Counts as magical and silver.</p>
+			<p><strong><em>Veilstep Strike (1/Short Rest):</em></strong> If you make an attack with both weapons in one turn and hit with both, you can forgo your bonus on the next turn to activate the glyphs' magic. <strong>Effect:</strong> Until the start of your next turn, you are considered lightly obscured <strong>(as if under the effect of blur)</strong>, granting disadvantage on the next attack roll made against you.</p>
+		</description>
+		<setters>
+			<set name="keywords">dagger</set>
+			<set name="category">Homebrew Items</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="type" addition="dagger">Weapon</set>
+			<set name="slot">onehand</set>
+			<set name="damage" type="piercing">1d4</set>
+			<set name="rarity">Rare</set>
+			<set name="weapon">ID_INTERNAL_WEAPON_CATEGORY_SIMPLE_MELEE||ID_INTERNAL_WEAPON_CATEGORY_SIMPLE_RANGED||ID_INTERNAL_WEAPON_CATEGORY_MARTIAL_MELEE||ID_INTERNAL_WEAPON_CATEGORY_MARTIAL_RANGED</set>
+		</setters>
+	</element>
+	<element name="Nightreaver's Blade" type="Magic Item" source="Homebrew" id="ID_SPOONY_HB_MAGIC_ITEM_NIGHTREAVERS_BLADE">
+		<supports>ID_INTERNAL_WEAPON_CATEGORY_MARTIAL_MELEE, ID_INTERNAL_DAMAGE_TYPE_PIERCING, ID_INTERNAL_WEAPON_PROPERTY_FINESSE, ID_INTERNAL_WEAPON_PROPERTY_LIGHT, ID_INTERNAL_WEAPON_GROUP_SWORDS</supports>
+		<description>
+			<p><strong><em>Special Qualities:</em></strong> Counts as magical and silver.</p>
+			<p><strong><em>Shadowstep Precision (1/Short Rest):</em></strong> When you hit a creature with both short swords on the same turn, you can teleport up to <strong>10 feet</strong> to an unoccupied space you can see as part of this turn. The teleport must place you within range of another enemy. You gain <strong>Advantage</strong> on the next attack roll made against this new target.</p>
+		</description>
+		<setters>
+			<set name ="keywords">shortsword</set>
+			<set name="category">Homebrew Items</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="weight" lb="0">0 lb.</set>
+			<set name="type" addition="shortsword">Weapon</set>
+			<set name="rarity">Rare</set>
+			<set name="slot">onehand</set>
+			<set name="damage" type="piercing">1d6</set>
+			<set name="weapon">Shortsword</set>
+			<set name="proficiency">ID_PROFICIENCY_WEAPON_PROFICIENCY_SHORTSWORD</set>
+		</setters>
+	</element>
+	<element name="Moonbrand Scimitar" type="Magic Item" source="Homebrew" id="ID_SPOONY_HB_MAGIC_ITEM_MOONBRAND_SCIMITAR">
+		<supports>ID_INTERNAL_WEAPON_CATEGORY_MARTIAL_MELEE, ID_INTERNAL_DAMAGE_TYPE_SLASHING, ID_INTERNAL_WEAPON_PROPERTY_FINESSE, ID_INTERNAL_WEAPON_PROPERTY_LIGHT, ID_INTERNAL_WEAPON_GROUP_SWORDS</supports>
+		<description>
+			<p><strong><em>Special Qualities:</em></strong> Counts as magical and silver.</p>
+			<p><strong><em>Dimming Strike (1/Short Rest):</em></strong> Using an action and bonus action (or extra attack) your next strike creates a field of dim shadow around the target <strong>(10 ft. radius)</strong> until the end of your next turn. Creatures in this area have <strong>Disadvantage on ranged attack rolls</strong>, and <strong>Perception checks</strong> relying on sight.</p>
+		</description>
+		<setters>
+			<set name="keywords">scimitar</set>
+			<set name="category">Homebrew Items</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="type" addition="scimitar">Weapon</set>
+			<set name="rarity">Rare</set>
+			<set name="weapon">Scimitar</set>
+			<set name="proficiency">ID_PROFICIENCY_WEAPON_PROFICIENCY_SCIMITAR</set>
+			<set name="slot">onehand</set>
+			<set name="damage" type="slashing">1d6</set>
+		</setters>
+	</element>
+	<element name="Wading Boots" type="Magic Item" source="Homebrew" id="ID_SPOONY_HB_MAGIC_ITEM_WADING_BOOTS">
+		<description>
+			<p>Protects from leeches and mud; grants advantage on checks vs. difficult swamp terrain. (Nonmagical)</p>
+		</description>
+		<setters>
+			<set name="keywords">swamp</set>
+			<set name="category">Homebrew Items</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="weight" lb="0">0 lb.</set>
+			<set name="slot">feet</set>
+			<set name="type">Homebrew Item</set>
+		</setters>
+	</element>
+	<element name="Swamp Camouflage Cloak" type="Magic Item" source="Homebrew" id="ID_SPOONY_HB_MAGIC_ITEM_SWAMP_CAMOUFLAGE_CLOAK">
+		<description>
+			<p>Rough-woven green-grey cloak; grants advantage on Stealth checks (swamp only).</p>
+		</description>
+		<setters>
+			<set name="keywords">cloak, stealth, swamp</set>
+			<set name="category">Homebrew Items</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="weight" lb="0">0 lb.</set>
+			<set name="slot">shoulders</set>
+			<set name="type">Homebrew Item</set>
+			<set name="rarity">Uncommon</set>
+		</setters>
+	</element>
+	<element name="Shadowweaver's Mantle" type="Magic Item" source="Homebrew" id="ID_SPOONY_HB_MAGIC_ITEM_SHADOWWEAVER_MANTLE">
+		<description>
+			<p>Cloak that grants <strong>resistance to necrotic damage</strong> and <strong>advantage on Stealth checks</strong>.</p>
+		</description>
+		<setters>
+			<set name="keywords">cloak, stealth</set>
+			<set name="category">Homebrew Items</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="weight" lb="0">0 lb.</set>
+			<set name="slot">shoulders</set>
+			<set name="type">Homebrew Item</set>
+			<set name="rarity">Rare</set>
+		</setters>
+	</element>
+	<element name="Wispering Cloak" type="Magic Item" source="Homebrew" id="ID_SPOONY_HB_MAGIC_ITEM_WHISPERING_CLOAK">
+		<description>
+			<p>Cast <strong>Misty Step</strong> once per short rest and grants advantage on saves vs. restraint.</p>
+		</description>
+		<setters>
+			<set name="keywords">cloak</set>
+			<set name="category">Homebrew Items</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="weight" lb="0">0 lb.</set>
+			<set name="slot">shoulders</set>
+			<set name="type">Homebrew Item</set>
+			<set name="rarity">Very Rare</set>
+		</setters>
+	</element>
+	<element name="Bloodrune Crystal" type="Magic Item" source="Homebrew" id="ID_SPOONY_HB_MAGIC_ITEM_BLOODRUNE_CRYSTAL">
+		<description>
+			<p>Once per <strong>Encounter</strong>, regain a 2nd-level spell slot after slaying a creature.</p>
+		</description>
+		<setters>
+			<set name="keywords">spell slot</set>
+			<set name="category">Homebrew Items</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="weight" lb="0">0 lb.</set>
+			<set name="type">Homebrew Item</set>
+			<set name="rarity">Very Rare</set>
+		</setters>
+	</element>
+	<element name="Howler's Fang" type="Magic Item" source="Homebrew" id="ID_SPOONY_HB_MAGIC_ITEM_HOWLER_FANG">
+		<description>
+			<p>Ground into a powder and inhaled, you gain <strong>+2 to damage rolls</strong> for 1 minute. <strong>Single use</strong>; causes 1 level of exhaustion afterward.</p>
+		</description>
+		<setters>
+			<set name="keywords">Drug</set>
+			<set name="category">Homebrew Items</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="weight" lb="0">0 lb.</set>
+			<set name="type">Homebrew Item</set>
+			<set name="rarity">Uncommon</set>
+		</setters>
+	</element>
+	<element name="Void-Touched Focus" type="Magic Item" source="Homebrew" id="ID_SPOONY_HB_MAGIC_ITEM_VOID_TOUCHED_FOCUS">
+		<description>
+			<p>Reroll one failed spell attack or saving throw per long rest. On a reroll of 1, you take <strong>1d6 Psychic damage</strong>.</p>
+		</description>
+		<setters>
+			<set name="keywords">lucky</set>
+			<set name="category">Homebrew Items</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="weight" lb="0">0 lb.</set>
+			<set name="type">Homebrew Item</set>
+			<set name="rarity">Very Rare</set>
+		</setters>
+	</element>
+	<element name="Ritualist's Band" type="Magic Item" source="Homebrew" id="ID_SPOONY_HB_MAGIC_ITEM_RITUALIST_BAND">
+		<description>
+			<p>Once per long rest, you can cast <strong>Counterspell</strong> at 3rd level.</p>
+		</description>
+		<setters>
+			<set name="keywords">spell</set>
+			<set name="category">Homebrew Items</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="weight" lb="0">0 lb.</set>
+			<set name="type">Homebrew Item</set>
+			<set name="rarity">Rare</set>
+		</setters>
+	</element>
+	<element name="Tethered Mask of Shadows" type="Magic Item" source="Homebrew" id="ID_SPOONY_HB_MAGIC_ITEM_TETHERED_MASK_OF_SHADOWS">
+		<description>
+			<p>Grants <strong>See Invisibility</strong> while worn but imposes disadvantage on Perception checks.</p>
+		</description>
+		<setters>
+			<set name="keywords">invisibility</set>
+			<set name="category">Homebrew Items</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="weight" lb="0">0 lb.</set>
+			<set name="type">Homebrew Item</set>
+			<set name="rarity">Very Rare</set>
+		</setters>
+	</element>
+	<element name="Silver Circlet of Resolve" type="Magic Item" source="Homebrew" id="ID_SPOONY_HB_MAGIC_ITEM_SILVER_CIRCLET_OF_RESOLVE">
+		<description>
+			<p>Grants +1 to <strong>Wisdom saving throws</strong>; resistance to being charmed.</p>
+		</description>
+		<setters>
+			<set name="keywords">charmed</set>
+			<set name="category">Homebrew Items</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="weight" lb="0">0 lb.</set>
+			<set name="type">Homebrew Item</set>
+			<set name="rarity">Rare</set>
+		</setters>
+	</element>
+	<element name="Hood of Whispering Breezes" type="Magic Item" source="Homebrew" id="ID_SPOONY_HB_MAGIC_ITEM_HOOD_OF_WHISPERING_BREEZES">
+		<description>
+			<p>When raised, soft wind follows you, muffling footsteps slightly; Once per long rest, grants advantage on a Stealth check.</p>
+		</description>
+		<setters>
+			<set name="keywords">Amira</set>
+			<set name="category">Homebrew Items</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="weight" lb="0">0 lb.</set>
+			<set name="type">Homebrew Item</set>
+			<set name="rarity">Uncommon</set>
+		</setters>
+	</element>
+	<element name="Gleamstitch Gloves" type="Magic Item" source="Homebrew" id="ID_SPOONY_HB_MAGIC_ITEM_GLEAMSTITCH_GLOVES">
+		<description>
+			<p>Fingers shimmer faintly; Once per long rest, you can cast <strong>Prestidigitation</strong>.</p>
+		</description>
+		<setters>
+			<set name="keywords">Amira</set>
+			<set name="category">Homebrew Items</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="weight" lb="0">0 lb.</set>
+			<set name="type">Homebrew Item</set>
+			<set name="rarity">Uncommon</set>
+		</setters>
+	</element>
+	<element name="Mirrorthread cloak" type="Magic Item" source="Homebrew" id="ID_SPOONY_HB_MAGIC_ITEM_MIRRORTHREAD_CLOAK">
+		<description>
+			<p>Once per long rest, grants disadvantage to attack rolls made against you as the cloak flashes bright silver light.</p>
+		</description>
+		<setters>
+			<set name="keywords">Amira</set>
+			<set name="category">Homebrew Items</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="weight" lb="0">0 lb.</set>
+			<set name="type">Homebrew Item</set>
+			<set name="rarity">Uncommon</set>
+		</setters>
+	</element>
+	<element name="Stitch of serenity" type="Magic Item" source="Homebrew" id="ID_SPOONY_HB_MAGIC_ITEM_STITCH_OF_SERENITY">
+		<description>
+			<p>Emits lavender aroma; wearer gains advantage on next saving throw against being frightened.</p>
+		</description>
+		<setters>
+			<set name="keywords">Amira</set>
+			<set name="category">Homebrew Items</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="weight" lb="0">0 lb.</set>
+			<set name="type">Homebrew Item</set>
+			<set name="rarity">Uncommon</set>
+		</setters>
+	</element>
+	<element name="Sunshadow shawl" type="Magic Item" source="Homebrew" id="ID_SPOONY_HB_MAGIC_ITEM_SUNSHADOW_SHAWL">
+		<description>
+			<p>Alternates between bright and dark hues depending on time of day. grants the ability to cast <strong>Thaumaturgy</strong> once per long rest.</p>
+		</description>
+		<setters>
+			<set name="keywords">Amira</set>
+			<set name="category">Homebrew Items</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="weight" lb="0">0 lb.</set>
+			<set name="type">Homebrew Item</set>
+			<set name="rarity">Uncommon</set>
+		</setters>
+	</element>
+	<element name="Secret Seam Hood" type="Magic Item" source="Homebrew" id="ID_SPOONY_HB_MAGIC_ITEM_SECRET_SEAM_HOOD">
+		<description>
+			<p><strong>(5/long rest) O O O O O</strong> You can whisper into the collar and use <strong>Message</strong>.</p>
+		</description>
+		<setters>
+			<set name="keywords">Amira</set>
+			<set name="category">Homebrew Items</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="weight" lb="0">0 lb.</set>
+			<set name="type">Homebrew Item</set>
+			<set name="rarity">Uncommon</set>
+		</setters>
+	</element>
+	<element name="Guardian Stitch Scarf" type="Magic Item" source="Homebrew" id="ID_SPOONY_HB_MAGIC_ITEM_GUARDIAN_STITCH_SCARF">
+		<description>
+			<p><strong>(1/Long Rest)</strong> Threads glow faintly, granting advantage on your next saving throw</p>
+		</description>
+		<setters>
+			<set name="keywords">Amira</set>
+			<set name="category">Homebrew Items</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="weight" lb="0">0 lb.</set>
+			<set name="type">Homebrew Item</set>
+			<set name="rarity">Uncommon</set>
+		</setters>
+	</element>
+	<element name="Cloudweave Cloak" type="Magic Item" source="Homebrew" id="ID_SPOONY_HB_MAGIC_ITEM_CLOUDWEAVE_CLOAK">
+		<description>
+			<p><strong>(1/Long Rest)</strong> When falling more than 10ft. the cloak unfurls into a soft glide and prevents fall damage.</p>
+		</description>
+		<setters>
+			<set name="keywords">Amira</set>
+			<set name="category">Homebrew Items</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="weight" lb="0">0 lb.</set>
+			<set name="type">Homebrew Item</set>
+			<set name="rarity">Uncommon</set>
+		</setters>
+	</element>
+	<element name="Sage's Hem Skirt/Pants (Lucky Pants)" type="Magic Item" source="Homebrew" id="ID_SPOONY_HB_MAGIC_ITEM_SAGE_HEM_SKIRT_PANTS">
+		<description>
+			<p>This lucky garment grants the wearer <strong>(1/Long Rest)</strong> a +1d4 bonus to one ability check.</p>
+		</description>
+		<setters>
+			<set name="keywords">Amira</set>
+			<set name="category">Homebrew Items</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="weight" lb="0">0 lb.</set>
+			<set name="type">Homebrew Item</set>
+			<set name="rarity">Uncommon</set>
 		</setters>
 	</element>
 </elements>

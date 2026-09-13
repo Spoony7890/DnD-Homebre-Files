@@ -2,7 +2,7 @@
 <elements>
 	<info>
 		<name>Homebrew Items</name>
-		<update version="0.1.5">
+		<update version="0.1.6">
 			<file name="Homebrew Items.xml" url="https://raw.githubusercontent.com/Spoony7890/DnD-Homebre-Files/refs/heads/main/Homebrew%20Items.xml" />
 		</update>
 	</info>
@@ -447,6 +447,25 @@
 			<set name="weight" lb="0">0 lb.</set>
 			<set name="type">Homebrew Item</set>
 			<set name="rarity">Uncommon</set>
+		</setters>
+	</element>
+	<element name="Eldoryn Pendant" type="Magic Item" source="Homebrew" id="ID_SPOONY_HB_MAGIC_ITEM_ELDORYN_PENDANT">
+		<description>
+			<p>A simple silver pendant that bears the image of a willow tree, with a single polished peridot nestled at the heart of the roots.</p>
+			<p class="indent"><strong><em>Kindled Hope</em></strong> Whenere a creature you see within 30 feet of you rolls a natural 20 on an attack roll, saving throw, or ability check, the pendant quickly gathers a spark of hope and gains <strong>1 Hope Charge</strong>. The pendant can only hold one charge at a time. While the pendant holds a <strong>Hope Charge</strong>, the peridot emits a faint, warm green glow. You may expend the <strong>Hope Charge</strong> as a reaction when one of the following occurs within 30 feet of you:</p>
+			<p class="indent"><strong><em>Another Chance:</em></strong> When a creature you can see fails a <strong>Wisdom</strong>, <strong>Intelligence</strong>, or <strong>Charisma</strong> saving throw, that creature may reroll the saving throw and must use the new result.</p>
+			<p class="indent"><strong><em>Preserve the Living:</em></strong> When a creature you can see is reduced to 0 hit points, that creature instead drops to the number of hit points equal to your <strong>Wisdom modifier</strong> (minimum of 1).</p>
+			<p class="indent"><strong><em>Hold Fast:</em></strong> When you fail a Constitution saving throw made to maintain <strong>Concentration</strong> on a spell, you may reroll the saving throw and must use the new result.</p>
+			<p class="indent">The <strong>Hope Charge</strong> fades at the next dawn if it has not been expended.</p>
+		</description>
+		<setters>
+			<set name="keywords">Eldoryn</set>
+			<set name="category">Homebrew Items</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="weight" lb="0">0 lb.</set>
+			<set name="type">Homebrew Item</set>
+			<set name="attunement">false</set>
+			<set name="rarity">Rare</set>
 		</setters>
 	</element>
 </elements>
